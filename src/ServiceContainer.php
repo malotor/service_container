@@ -8,7 +8,7 @@ class ServiceContainer {
  
   private $services = array();
 
-  private cons SERVICES_FILE = './services.yml'
+  const SERVICES_FILE = './services.yml';
 
   public function __construct() {
 
