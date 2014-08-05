@@ -4,11 +4,17 @@ namespace malotor\service_container;
 
 use Symfony\Component\Yaml\Parser;
 
-class ServiceContainer {
+interface iServiceContainer {
+
+	public function getService($serviceName, $args );
+
+}
+
+class ServiceContainer implements iServiceContainer{
  
   private $services = array();
 
-  private cons SERVICES_FILE = './services.yml'
+  const SERVICES_FILE = './services.yml';
 
   public function __construct() {
 
